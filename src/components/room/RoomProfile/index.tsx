@@ -1,7 +1,7 @@
 import { Room } from "../../../utils/Types";
 import RoomAmmenities from "./RoomAmmenities";
 import RoomHero from "./RoomHero";
-import RoomLocation from "./RoomLocation";
+// import RoomLocation from "./RoomLocation";
 import RoomReviews from "./RoomReviews";
 import RoomProfileStyle from "./style";
 
@@ -16,11 +16,11 @@ const RoomProfile = ({
     <RoomProfileStyle>
       <RoomHero name={room.name} image={room.image} />
       <RoomAmmenities ammenities={room.ammenities} />
-      <RoomLocation
+      {/* <RoomLocation
         location={room.location}
         title={room.title}
         setIsMapLoaded={setIsMapLoaded}
-      />
+      /> */}
       <RoomReviews reviews={room.reviews} />
     </RoomProfileStyle>
   );

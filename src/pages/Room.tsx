@@ -20,7 +20,7 @@ const Room = () => {
     room: RoomType | null;
   }>({ isFetching: true, room: null });
 
-  const [isMapLoaded, setIsMapLoaded] = useState<boolean>(false);
+  const [isMapLoaded, setIsMapLoaded] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchController = new AbortController();
