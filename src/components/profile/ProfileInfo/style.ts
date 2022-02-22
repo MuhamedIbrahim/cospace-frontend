@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const ProfileInfoStyle = styled.form`
-  max-width: 500px;
-  margin: auto;
   .profile_info__upload {
     display: flex;
     align-items: center;

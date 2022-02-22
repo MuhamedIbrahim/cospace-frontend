@@ -14,6 +14,7 @@ const Rooms = ({ type }: { type: "login" | "signup" | "resetPassword" }) => {
         backgroundColor: "#F6F9FE",
         alignItems: "center",
         justifyContent: "center",
+        height: "100vh",
       }}
     >
       <AuthPage type={type} />

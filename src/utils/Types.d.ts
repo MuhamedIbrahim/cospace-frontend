@@ -93,6 +93,7 @@ export interface Booking {
   from: string;
   to: string;
   totalPrice: number;
+  isReviewed: boolean;
   createdAt: string;
   updatedAt: string;
 }

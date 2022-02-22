@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const RoomCardStyle = styled(Link)`
+const RoomCardStyle = styled.div`
   display: flex;
   margin-top: 30px;
   border: 1px solid var(--lightGrey3);
@@ -9,11 +8,12 @@ const RoomCardStyle = styled(Link)`
   ${(props) => props.theme.breakpoints.smDown} {
     flex-wrap: wrap;
   }
-  &:hover {
+  a:hover {
     text-decoration: none;
   }
   .card_image {
     position: relative;
+    display: block;
     ${(props) => props.theme.breakpoints.smDown} {
       width: 100%;
     }
@@ -38,6 +38,7 @@ const RoomCardStyle = styled(Link)`
     }
   }
   .card_info {
+    position: relative;
     padding: 20px;
     h2 {
       color: var(--darkGrey);
@@ -62,6 +63,39 @@ const RoomCardStyle = styled(Link)`
       }
     }
   }
+  .card_info__ask_review {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3;
+  }
 `;
 
 export default RoomCardStyle;
+
+export const AddReviewCardStyle = styled.form`
+  margin-top: 10px;
+  border: 1px solid var(--lightGrey3);
+  border-radius: 3px;
+  padding: 20px;
+  position: relative;
+  label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--darkGrey2);
+  }
+  > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .card__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+  }
+  .card__rating {
+    button {
+      color: var(--orange);
+    }
+  }
+`;

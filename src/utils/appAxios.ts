@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const appAxios = axios.create({
-  baseURL: "https://cospace.herokuapp.com/api/v1",
+  baseURL: "https://cospacerooms.netlify.app/api/v1",
 });
 
 appAxios.interceptors.request.use((config) => {
