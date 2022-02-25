@@ -87,6 +87,7 @@ export interface Room {
 }
 
 export interface Booking {
+  _id: string;
   room: string | Room;
   user: string | User;
   day: string;

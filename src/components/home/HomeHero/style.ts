@@ -87,7 +87,7 @@ const HomeHeroStyle = styled.section`
     span {
       display: block;
       margin: 0;
-      font-size: 19px;
+      font-size: 17px;
       font-weight: 500;
       padding: 0 10px;
     }

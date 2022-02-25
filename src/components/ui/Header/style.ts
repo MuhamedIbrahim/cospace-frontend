@@ -12,7 +12,7 @@ const HeaderStyle = styled.header<{ headerStyle: "default" | "blue" }>`
   color: var(--${(props) =>
     props.headerStyle === "blue" ? "lightGrey3" : "darkGrey2"});
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
   transition: .2s background-color;
   ${(props) => props.theme.breakpoints.lgDown} {
     height: var(--headerMdHeight);
@@ -40,7 +40,7 @@ const HeaderStyle = styled.header<{ headerStyle: "default" | "blue" }>`
         color: var(--${(props) =>
           props.headerStyle === "blue" ? "lightGrey3" : "darkGrey2"});
         font-weight: 500;
-        font-size: 14px;
+        font-size: 15px;
         &:hover {
           text-decoration: none;
           color: var(--${(props) =>

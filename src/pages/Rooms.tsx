@@ -22,7 +22,7 @@ const Rooms = () => {
     (async () => {
       let rooms: Room[] = [];
       await appAxios
-        .get("/room?sort=rating,ratingsQuantity", { signal })
+        .get("/room?sort=rating,-ratingsQuantity", { signal })
         .then((res) => {
           rooms = res.data.data.rooms;
         })

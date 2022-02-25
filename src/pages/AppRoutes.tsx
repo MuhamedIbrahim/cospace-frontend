@@ -7,6 +7,7 @@ import Profile from "./Profile";
 import ProfileInfo from "../components/profile/ProfileInfo";
 import Toast from "../components/ui/Toast";
 import ProfileBookings from "../components/profile/ProfileBookings";
+import Page404 from "./Page404";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const AppRoutes = () => {
           <Route index element={<Rooms />} />
         </Route>
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </>
   );

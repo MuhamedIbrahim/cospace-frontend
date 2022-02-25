@@ -55,6 +55,7 @@ const RoomCardStyle = styled.div`
     .card_info__ammenities {
       margin: 0;
       color: var(--lightGrey6);
+      font-size: 15px;
       span:not(:last-child)::after {
         content: "•";
         margin: 0 7px;

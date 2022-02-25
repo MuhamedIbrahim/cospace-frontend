@@ -26,7 +26,7 @@ const RoomCard = ({
   const [isRoomReviewed, setIsRoomReviewed] = useState<{
     flag: boolean;
     isOpen: boolean;
-  }>({ flag: askToAddReview, isOpen: false });
+  }>({ flag: !askToAddReview, isOpen: false });
   const {
     handleSubmit,
     watch,
@@ -96,7 +96,9 @@ const RoomCard = ({
         </Link>
         <div
           className="card_info"
-          {...(isRoomReviewed.flag ? { style: { paddingBottom: "80px" } } : {})}
+          {...(!isRoomReviewed.flag
+            ? { style: { paddingBottom: "80px" } }
+            : {})}
         >
           <Link to={`/rooms/${room.slug}`}>
             <h2>{room.name}</h2>
@@ -112,7 +114,8 @@ const RoomCard = ({
                     ) : (
                       <RiStarLine key={index} />
                     )
-                  )}
+                  )}{" "}
+                ({room.ratingsQuantity})
               </div>
             )}
             <p className="card_info__ammenities">
@@ -123,7 +126,7 @@ const RoomCard = ({
                 ))}
             </p>
           </Link>
-          {isRoomReviewed.flag && (
+          {!isRoomReviewed.flag && (
             <Button
               label="Add review"
               buttonType="button"

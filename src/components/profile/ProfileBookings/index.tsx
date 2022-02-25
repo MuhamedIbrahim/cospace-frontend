@@ -41,15 +41,15 @@ const ProfileBookings = () => {
           <LoadingSpinner />
         ) : (
           <div className="bookings__rooms">
-            {pageState.bookings.map(({ room, isReviewed, day, to }) => (
+            {pageState.bookings.map(({ _id, room, isReviewed, day, to }) => (
               <RoomCard
-                key={(room as Room)._id}
+                key={_id}
                 room={room as Room}
                 roomTag={
                   dateFns.format(new Date(day), "yyyy-MM-dd") >
                   dateFns.format(new Date(), "yyyy-MM-dd")
                     ? "Scheduled"
-                    : ""
+                    : dateFns.format(new Date(day), "dd-MMM-yyyy")
                 }
                 hideReviews={true}
                 askToAddReview={
