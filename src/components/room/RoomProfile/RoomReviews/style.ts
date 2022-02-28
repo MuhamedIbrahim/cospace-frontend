@@ -42,7 +42,7 @@ const RoomReviewsStyle = styled.div`
   }
   .room_reviews__single_review {
     color: var(--darkGrey2);
-    margin: 0;
+    margin: 5px 0 0;
   }
 `;
 
